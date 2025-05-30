@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout Source') {
     steps {
         echo 'Checking out source code...'
-        git branch: 'main', url: 'https://github.com/rollinopz/brightmind-tech.git'
+        git branch: 'main', url: 'https://github.com/Banck23/brightmind-tech.git'
     }
 }
         stage('Build') {
@@ -38,7 +38,7 @@ pipeline {
                         deploy adapters: [
                             tomcat9(
                                 credentialsId: 'TomcatCreds',
-                                url: 'http://localhost:8084'
+                                url: 'http://localhost:8080'
                             )
                         ], 
                         contextPath: '/brightmind-tech',
