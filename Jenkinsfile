@@ -38,7 +38,7 @@ pipeline {
                         deploy adapters: [
                             tomcat9(
                                 credentialsId: 'TomcatCreds',
-                                url: 'http://localhost:8080'
+                                url: 'http://localhost:8004'
                             )
                         ], 
                         contextPath: '/brightmind-tech',
