@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        jdk 'JDK-21'
+        jdk 'JDK-17'
         maven 'Maven 3.9.9'
     }
     stages {
@@ -38,7 +38,7 @@ pipeline {
                         deploy adapters: [
                             tomcat9(
                                 credentialsId: 'TomcatCreds',
-                                url: 'http://localhost:8080'
+                                url: 'http://localhost:8006'
                             )
                         ], 
                         contextPath: '/brightmind-tech',
